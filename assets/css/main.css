@@ -1,0 +1,195 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: "OKKO Sans Regular";
+  src: url(/assets/fonts/ba3f3c077e5dfbb32c49.woff2) format("woff2"), url(/assets/fonts/50d099b4a9ec0c83e993.woff) format("woff"), url(/assets/fonts/06889eb4fc8f9c0d29c5.ttf) format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "OKKO Sans Medium";
+  src: url(/assets/fonts/4860763ac9aafc34fed8.woff2) format("woff2"), url(/assets/fonts/67d8eb6e6590548ce4be.woff) format("woff"), url(/assets/fonts/adfb05dab176ae46b4c0.ttf) format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "OKKO Sans DemiBold";
+  src: url(/assets/fonts/aad9750f51738df25442.woff2) format("woff2"), url(/assets/fonts/27b0440ded638a4403f6.woff) format("woff"), url(/assets/fonts/e53b1e31d834525a53f7.ttf) format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "OKKO Sans Bold";
+  src: url(/assets/fonts/8edee193111221f91d45.woff2) format("woff2"), url(/assets/fonts/d5d9eefa9e007f2e000d.woff) format("woff"), url(/assets/fonts/8a6e3479fa41c45de4da.ttf) format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "OKKO Sans Black";
+  src: url(/assets/fonts/1e68bd37f697293de705.woff2) format("woff2"), url(/assets/fonts/63f393ff6f2cf85d267c.woff) format("woff"), url(/assets/fonts/54798a02458b96a08137.ttf) format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "OKKO SuisseIntl Light";
+  src: url(/assets/fonts/d26af36d03cd6be36896.otf) format("opentype"), url(/assets/fonts/e87973d3586ae0ad0334.woff2) format("woff2"), url(/assets/fonts/dee3e82fce91ca2fd571.ttf) format("truetype"), url(/assets/fonts/8c69eff40456a0b309ec.woff) format("woff");
+  font-display: fallback;
+}
+body {
+  font-family: "OKKO Sans Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.96);
+  text-align: left;
+  background-color: #000;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  padding: 0 72px;
+  height: 70px;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.96);
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header .nav .nav__logo {
+  flex: 0 1 auto;
+  color: inherit;
+  height: auto;
+  width: 4.74em;
+  margin-right: 2.5em;
+  background-color: transparent;
+  z-index: 1;
+}
+.header .nav .nav__list {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+.header .nav .nav__list .list__item {
+  margin: 0;
+  padding: 0 0.72em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "OKKO Sans Medium", sans-serif;
+}
+.header .nav .nav__list .list__item a {
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  transition: color 0.1s;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.56);
+}
+.header .nav .nav__list .list__item a:hover {
+  color: rgba(255, 255, 255, 0.96);
+}
+.header .nav .nav__list .list__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transition: opacity 0.3s;
+  background: linear-gradient(270deg, transparent 0.17%, #5d0ef5 15.74%, #fff 50%, #5d0ef5 83.22%, transparent 100%);
+  opacity: 0;
+}
+.header .nav .nav__list .list__item.active a {
+  color: rgba(255, 255, 255, 0.96);
+}
+.header .nav .nav__list .list__item.active::after {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
